@@ -1,0 +1,15 @@
+{
+    "name": "przepompownia/phpunit-filter-examples",
+    "authors": [
+        {
+            "name": "przepompownia",
+            "email": "przepompownia@noreply.github.com"
+        }
+    ],
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require": {}
+}

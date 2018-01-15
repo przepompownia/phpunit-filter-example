@@ -1,0 +1,14 @@
+dist: trusty
+sudo: true 
+language: 'php'
+
+install:   
+    - composer install --no-interaction --no-scripts
+
+script:
+    - ./vendor/bin/phpunit --filter '::testWithoutDataProvider$' tests/ExampleTest.php
+    - ./vendor/bin/phpunit --filter '/::testWithoutDataProvider .*$/' tests/ExampleTest.php
+    - ./vendor/bin/phpunit --filter '::testWithoutDataProvider' tests/ExampleTest.php
+    - ./vendor/bin/phpunit --filter '::testWithDataProvider$' tests/ExampleTest.php
+    - ./vendor/bin/phpunit --filter '/::testWithDataProvider .*$/' tests/ExampleTest.php
+    - ./vendor/bin/phpunit --filter '::testWithDataProvider' tests/ExampleTest.php
